@@ -26,14 +26,12 @@
             --border-radius: 4px;
             --color: #333;
             --border-color: #999;
-            --border-color-hover: #666;
+            --border-color-hover: red;
         }
-    </style>
 
-    <style>
-        .icon{
-            width: 1em;
-            height: 1em;
+        #app{
+            margin: 50px;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -44,10 +42,15 @@
         <g-button icon-position="right">wmh</g-button>
         <g-button icon="setting" :loading="loading1" @click="loading1 = !loading1" >wmh</g-button>
 
-        <g-icon name="left" >wmh</g-button>
+        <!-- <g-icon name="left" ></g-icon> -->
+            
+        <g-button-group>
+                <g-button icon="left">上一页</g-button>
+                <g-button>更多</g-button>
+                <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
     </div>
     <script src="./src/app.js"></script>
     <script src="//at.alicdn.com/t/font_742680_iwh0oz6jl2i.js"></script>
 </body>
-
 </html>
