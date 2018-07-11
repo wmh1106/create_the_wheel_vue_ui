@@ -20,3 +20,4 @@
 定义全局组件：`Vue.component(name,option)`
 
 组件中的插槽：slot
+组件传值：props
