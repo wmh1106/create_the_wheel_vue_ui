@@ -1,5 +1,7 @@
 <template>
-    <button class="g-button">hello world</button>
+    <button class="g-button">
+        <slot></slot>
+    </button>
 </template>
 <script>
 export default {
