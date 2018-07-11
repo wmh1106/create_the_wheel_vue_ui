@@ -1,17 +1,22 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-        <svg v-if="icon" class="icon" >
-            <use :xlink:href="`#i-${icon}`"></use>
-        </svg>
+    <button class="g-button"
+            :class="{[`icon-${iconPosition}`]:true}">
+        <g-icon v-if="icon"
+                class="icon"
+                :name="icon"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
     </button>
 </template>
 <script>
+
+import Icon from './icon'
+
 export default {
-  name: "",
+  name: "GuluButton",
 //   props:['icon','iconPosition']
+  
   props:{
       icon:{},
       iconPosition:{
