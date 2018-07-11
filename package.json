@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/wmh1106/create_the_wheel_vue_ui/issues"
   },
-  "homepage": "https://github.com/wmh1106/create_the_wheel_vue_ui#readme"
+  "homepage": "https://github.com/wmh1106/create_the_wheel_vue_ui#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }
