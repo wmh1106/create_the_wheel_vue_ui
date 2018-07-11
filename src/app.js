@@ -16,104 +16,104 @@ var vm = new Vue({
   }
 });
 
-import chai from "chai";
-import spies from "chai-spies";
+// import chai from "chai";
+// import spies from "chai-spies";
 
-chai.use(spies);
+// chai.use(spies);
 
-const expect = chai.expect;
+// const expect = chai.expect;
 
-{
-  const Constructor = Vue.extend(Button);
-  const vm = new Constructor({
-    propsData: {
-      icon: "setting"
-    }
-  });
+// {
+//   const Constructor = Vue.extend(Button);
+//   const vm = new Constructor({
+//     propsData: {
+//       icon: "setting"
+//     }
+//   });
 
-  vm.$mount();
-  let useElement = vm.$el.querySelector("use");
-  let href = useElement.getAttribute("xlink:href");
+//   vm.$mount();
+//   let useElement = vm.$el.querySelector("use");
+//   let href = useElement.getAttribute("xlink:href");
 
-  expect(href).to.eq("#i-setting");
+//   expect(href).to.eq("#i-setting");
 
-  vm.$el.remove();
-  vm.$destroy();
-}
+//   vm.$el.remove();
+//   vm.$destroy();
+// }
 
-{
-  const Constructor = Vue.extend(Button);
-  const vm = new Constructor({
-    propsData: {
-      icon: "setting",
-      loading: true
-    }
-  });
+// {
+//   const Constructor = Vue.extend(Button);
+//   const vm = new Constructor({
+//     propsData: {
+//       icon: "setting",
+//       loading: true
+//     }
+//   });
 
-  vm.$mount();
-  let useElement = vm.$el.querySelector("use");
-  let href = useElement.getAttribute("xlink:href");
+//   vm.$mount();
+//   let useElement = vm.$el.querySelector("use");
+//   let href = useElement.getAttribute("xlink:href");
 
-  expect(href).to.eq("#i-loading");
+//   expect(href).to.eq("#i-loading");
 
-  vm.$el.remove();
-  vm.$destroy();
-}
+//   vm.$el.remove();
+//   vm.$destroy();
+// }
 
-{
-  const div = document.createElement("div");
-  document.body.appendChild(div);
-  const Constructor = Vue.extend(Button);
-  const vm = new Constructor({
-    propsData: {
-      icon: "setting"
-    }
-  });
+// {
+//   const div = document.createElement("div");
+//   document.body.appendChild(div);
+//   const Constructor = Vue.extend(Button);
+//   const vm = new Constructor({
+//     propsData: {
+//       icon: "setting"
+//     }
+//   });
 
-  vm.$mount(div);
-  let svg = vm.$el.querySelector("svg");
-  let { order } = window.getComputedStyle(svg);
+//   vm.$mount(div);
+//   let svg = vm.$el.querySelector("svg");
+//   let { order } = window.getComputedStyle(svg);
 
-  expect(order).to.eq("1");
-  vm.$el.remove();
-  vm.$destroy();
-}
-{
-  const div = document.createElement("div");
-  document.body.appendChild(div);
-  const Constructor = Vue.extend(Button);
-  const vm = new Constructor({
-    propsData: {
-      icon: "setting",
-      iconPosition: "right"
-    }
-  });
+//   expect(order).to.eq("1");
+//   vm.$el.remove();
+//   vm.$destroy();
+// }
+// {
+//   const div = document.createElement("div");
+//   document.body.appendChild(div);
+//   const Constructor = Vue.extend(Button);
+//   const vm = new Constructor({
+//     propsData: {
+//       icon: "setting",
+//       iconPosition: "right"
+//     }
+//   });
 
-  vm.$mount(div);
-  let svg = vm.$el.querySelector("svg");
-  let { order } = window.getComputedStyle(svg);
+//   vm.$mount(div);
+//   let svg = vm.$el.querySelector("svg");
+//   let { order } = window.getComputedStyle(svg);
 
-  expect(order).to.eq("2");
-  vm.$el.remove();
-  vm.$destroy();
-}
+//   expect(order).to.eq("2");
+//   vm.$el.remove();
+//   vm.$destroy();
+// }
 
-{
-  const Constructor = Vue.extend(Button);
-  const vm = new Constructor({
-    propsData: {
-      icon: "setting",
-      iconPosition: "right"
-    }
-  });
+// {
+//   const Constructor = Vue.extend(Button);
+//   const vm = new Constructor({
+//     propsData: {
+//       icon: "setting",
+//       iconPosition: "right"
+//     }
+//   });
 
-  vm.$mount();
-  let spy = chai.spy(()=>{
-      console.log('spy,执行了')
-  })
-  vm.$on("click", spy);
-  let button = vm.$el;
-  button.click();
+//   vm.$mount();
+//   let spy = chai.spy(()=>{
+//       console.log('spy,执行了')
+//   })
+//   vm.$on("click", spy);
+//   let button = vm.$el;
+//   button.click();
 
-  expect(spy).to.have.been.called()
-}
+//   expect(spy).to.have.been.called()
+// }
