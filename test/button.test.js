@@ -70,6 +70,7 @@ describe("Button", () => {
       }
     }).$mount();
 
+    // sinon.fake() 这个函数可以知道自己有没有被调用
     const callback = sinon.fake();
     vm.$on("click", callback);
     vm.$el.click();
