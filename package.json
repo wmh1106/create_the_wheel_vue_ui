@@ -1,0 +1,23 @@
+{
+  "name": "create_vue_ui_project",
+  "version": "0.0.1",
+  "description": "这是一个 vue ui 组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmh1106/create_the_wheel_vue_ui.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmh1106/create_the_wheel_vue_ui/issues"
+  },
+  "homepage": "https://github.com/wmh1106/create_the_wheel_vue_ui#readme"
+}
