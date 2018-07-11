@@ -9,7 +9,7 @@ var vm = new Vue({
     el: '#app',
     data(){
         return {
-            loading:false
+            loading1:false
         }
     }
 })
